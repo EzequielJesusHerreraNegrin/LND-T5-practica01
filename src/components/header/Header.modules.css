@@ -1,0 +1,21 @@
+.header {
+    background-color: black;
+    position: absolute;
+    max-height: 30vh;
+    width: 100vw;
+    line-height: 0.5;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.header__title{
+    font-size: white 50px;
+    font-weight: 600;
+}
+
+.header__subtitle{
+    font-size: white 1.25rem;
+    font-weight: 100;
+}
