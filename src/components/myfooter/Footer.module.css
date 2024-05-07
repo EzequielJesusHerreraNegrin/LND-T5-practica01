@@ -11,10 +11,6 @@
     flex-direction: row;
 }
 
-.footerIcon {
-    width: auto;
-}
-
 .footerMessage {
     width: auto;
     margin: 0;

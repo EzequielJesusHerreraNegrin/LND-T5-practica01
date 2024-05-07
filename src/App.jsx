@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Header title={"Tema 05"} subtitle={"Práctica 01"} />
-      <Footer />
+      <Footer message={"All right reserved"} />
     </>
   )
 }
