@@ -1,11 +1,12 @@
 #root {
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   font-size: 1rem;
 }
 
 .main {
   display: flex;
   flex: auto;
-  align-items: center;
-  justify-content: center;
 }

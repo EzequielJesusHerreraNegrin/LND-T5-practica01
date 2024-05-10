@@ -9,16 +9,20 @@ import {
   faVenus,
   faLocationDot,
   faCalendar,
+  faCommentDots,
+  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 
 const Card = ({ character }) => {
   function isAlive() {
     if (character.status === "Alive") {
-      return "alive-status";
+      return styles.alive_status;
     } else if (character.status === "Dead") {
-      return "death-status";
+      return styles.death_status;
     }
   }
+
+  console.log(`${isAlive()}`);
 
   const isMale = character.gender === "Male";
 
@@ -34,25 +38,41 @@ const Card = ({ character }) => {
   return (
     <>
       <div className={styles.cardContainer}>
-        <div className="card__wrapper">
-          <div className="card__header">
+        <div className={styles.card__wrapper}>
+          <div className={styles.card__header}>
             <div className="card__item--image">
               <img
                 className={`image ${styles.avatar}`}
                 src={`src/assets/images/${character.id}.jpeg`}
               ></img>
             </div>
-            <p className={`${isAlive()}`}>{character.name}</p>
-            <p className={`${isAlive()}`}>{character.status}</p>
+            <div className={styles.header__info__wrapper}>
+              <p className={styles.header__name}>{character.name}</p>
+              <p
+                className={`${
+                  character.status === `Alive`
+                    ? styles.status_alive
+                    : styles.status_dead
+                }`}
+              >
+                {character.status}
+              </p>
+            </div>
           </div>
           <div className="card__body">
-            <card className="card__characterInfo">
+            <card className={styles.card__characterInfo}>
               <card className="card__characterInfo card__characterInfo--stat01">
                 <p>
                   {isMale ? (
-                    <FontAwesomeIcon icon={faPerson} />
+                    <FontAwesomeIcon
+                      className={styles.card__icons}
+                      icon={faPerson}
+                    />
                   ) : (
-                    <FontAwesomeIcon icon={faPersonDress} />
+                    <FontAwesomeIcon
+                      className={styles.card__icons}
+                      icon={faPersonDress}
+                    />
                   )}{" "}
                   {character.species}
                 </p>
@@ -60,30 +80,53 @@ const Card = ({ character }) => {
               <card className="card__characterInfo card__characterInfo--stat02">
                 <p>
                   {isMale ? (
-                    <FontAwesomeIcon icon={faMars} />
+                    <FontAwesomeIcon
+                      className={styles.card__icons}
+                      icon={faMars}
+                    />
                   ) : (
-                    <FontAwesomeIcon icon={faVenus} />
+                    <FontAwesomeIcon
+                      className={styles.card__icons}
+                      icon={faVenus}
+                    />
                   )}{" "}
                   {character.gender}
                 </p>
               </card>
               <card className="card__characterInfo card__characterInfo--stat03">
                 <p>
-                  <FontAwesomeIcon icon={faLocationDot} />
+                  <FontAwesomeIcon
+                    className={styles.card__icons}
+                    icon={faLocationDot}
+                  />
                   {character.origin}
                 </p>
               </card>
               <card className="card__characterInfo card__characterInfo--stat04">
                 <p>
-                  <FontAwesomeIcon icon={faCalendar} />
+                  <FontAwesomeIcon
+                    className={styles.card__icons}
+                    icon={faCalendar}
+                  />
                   {characterDate}
                 </p>
               </card>
             </card>
           </div>
           <div className="card__footer">
-            <div className="card__footer card__footer--buttom1"></div>
-            <div className="card__footer card__footer--buttom2"></div>
+            <div className={styles.card__footer__buttom}>
+              <button className={styles.card__buttom1}>
+                <FontAwesomeIcon icon={faUser} />
+                Perfil
+              </button>
+              <button className={styles.card__button2}>
+                <FontAwesomeIcon
+                  className={styles.card__button}
+                  icon={faCommentDots}
+                />
+                Contacto
+              </button>
+            </div>
           </div>
         </div>
       </div>
