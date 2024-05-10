@@ -1,0 +1,22 @@
+.cardContainer {
+  background-color: white;
+  position: relative;
+  font-size: large;
+  top: 20vh;
+  height: 50vh;
+  width: 50vw;
+}
+
+.card__wrapper {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  margin: auto;
+  padding-left: 20px;
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+.card__header {
+  flex-direction: row;
+}
