@@ -7,7 +7,6 @@ const Footer = () => {
     const añoEsperado = fecha.getFullYear() - 1;
     return (
         <div className={styles.footerContainer}>
-            <div className={styles.footerIcon}></div>
             <p className={styles.footerMessage}>&copy; {añoEsperado} All right reserved</p>
         </div>
     )
