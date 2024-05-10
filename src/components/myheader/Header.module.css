@@ -1,22 +1,22 @@
 .headerContainer {
-    background-color: black;
-    color: white;
-    height: 30vh;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
+  background-color: #28242c;
+  color: white;
+  top: 0;
+  height: 12vh;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  background-color: black;
+  color: white;
+  z-index: 2;
 }
 
 .headerTitle {
-    margin: 0;
-    font-weight: 700;
+  margin: 0;
+  font-weight: 700;
 }
 
 .headerSubtitle {
-    margin: 0;
-    font-weight: 500;
-
+  margin: 0;
+  font-weight: 500;
 }
